@@ -1,0 +1,40 @@
+{
+
+    "watchForFileChanges":false,
+    "chromeWebSecurity": false,
+    "timeout": 2000,
+    "failOnStatusCode": false,
+
+
+     
+    "planData": "30GB",
+    "includePromotionPlanData": "80GB",
+    "planProductName": "$45 SIM Only Lite+ Plan",
+    "isBundleAndSaveEligible": true,
+    "planSubType": "SIM Only M2M Plus",
+    "ctaDisabledLabel": "",
+    "ctaSelectedLabel": "",
+    "expandPlanByDefault": false,
+    "contractTerm": 1,
+    "recurringCharge": 45,
+    "planCategory": "Postpaid",
+    "ratesLabel": "&lt;p&gt;&lt;vha-modal-trigger type=&quot;plain&quot; id=&quot;simoinfiniterates&quot;&gt;Rates and charges&lt;/vha-modal-trigger&gt;&lt;/p&gt;",
+    "ratesUrl": "",
+    "dataSharing": "Omega",
+
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true,
+
+        "reporter": "mochawesome",
+        "reporterOptions": {
+          "charts": true,
+          "overwrite": false,
+          "html": false,
+          "json": true,
+          "reportDir": "cypress/reports"
+        }
+      }
+
+      
+
+}

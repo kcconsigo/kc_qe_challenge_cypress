@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-02T06:03:44.253Z",
+    "end": "2022-02-02T06:03:50.060Z",
+    "duration": 5807,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "30268623-a4cf-4d0c-8ce1-37f350da9932",
+      "title": "",
+      "fullFile": "cypress/integration/GreenKartAutomation.js",
+      "file": "cypress/integration/GreenKartAutomation.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "da930bec-2972-41f2-ab35-2f6bb8d771a2",
+          "title": "GreenKartAutomation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "HomePage",
+              "fullTitle": "GreenKartAutomation HomePage",
+              "timedOut": null,
+              "duration": 4372,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.products > :nth-child(1) > .product-name').contains('Brocolli - 1 Kg');\ncy.get(':nth-child(1) > .stepper-input > .increment').click();\ncy.get(':nth-child(1) > .product-action > button').click().contains('✔ ADDED');\ncy.get(':nth-child(3) > .product-name').contains('Cucumber - 1 Kg');\ncy.get(':nth-child(3) > .stepper-input > .increment').click();\ncy.get(':nth-child(3) > .product-action > button').click().contains('✔ ADDED');\ncy.get('.cart-icon > img').click();\ncy.get('.cart-preview > .action-block > button').click({\n  timeout: 2000\n});\ncy.get(':nth-child(1) > :nth-child(2) > .product-name').each(($e1, index, $list) => {\n  const brocolli = $e1.text();\n  if (brocolli.includes(\"Brocolli - 1 Kg\")) {\n    cy.get(':nth-child(1) > :nth-child(2) > .product-name').eq(index).then(function (Field) {\n      const prodText = Field.text();\n      expect(prodText).to.equal(\"Brocolli - 1 Kg\");\n    });\n  }\n});\ncy.get(':nth-child(2) > :nth-child(2) > .product-name').each(($e1, index, $list) => {\n  const cucumber = $e1.text();\n  if (cucumber.includes(\"Cucumber - 1 Kg\")) {\n    cy.get(':nth-child(2) > :nth-child(2) > .product-name').eq(index).then(function (Field) {\n      const prodText = Field.text();\n      expect(prodText).to.equal(\"Cucumber - 1 Kg\");\n    });\n  }\n});\ncy.get('.promoCode').type('12220');\ncy.get('.totAmt').contains('336');\ncy.get('.promoBtn').click();\ncy.get(':nth-child(14)').click({\n  timeout: 2000\n});\ncy.get('select').select('Japan').should('have.value', 'Japan');\ncy.get('.chkAgree').check();\ncy.get('button').click();\nCypress.on('uncaught:exception', (err, runnable) => {\n  // returning false here prevents Cypress from\n  // failing the test\n  //document.getElementById('clock').innerHTML\n  return false;\n});",
+              "err": {},
+              "uuid": "46e32139-7a22-4676-9e09-7ee32f529f2b",
+              "parentUUID": "da930bec-2972-41f2-ab35-2f6bb8d771a2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "46e32139-7a22-4676-9e09-7ee32f529f2b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4372,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.0.1"
+    }
+  }
+}
